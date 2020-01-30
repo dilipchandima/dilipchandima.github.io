@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Why Complex code with Getters and Setters in JAVA ? It’s time to move with Lombok - dilipchandima</title>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,700&amp;subset=sinhala">
+    <link href="https://dilipchandima.github.io/theme/static/css/style.css" rel="stylesheet" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link
+      href="https://dilipchandima.github.io/feeds/all.atom.xml"
+      type="application/atom+xml"
+      rel="alternate"
+      title="dilipchandima Full Atom Feed"
+    />
+         </head>
+
+  <body id="index" class="archive">
+    <div class="header">
+      <div class="top-bar"></div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">dilipchandima </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a  class="nav-link" href="https://dilipchandima.github.io/pages/about.html">
+                Me
+              </a>
+            </li>
+ 
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categories
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="https://dilipchandima.github.io/category/tech.html">TECH</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://dilipchandima.github.io/archives.html"
+                >Archives</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="https://github.com/dilipchandima"
+                >GitHub</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+<section id="content" class="article content">
+  <header>
+    <h2 class="entry-title">
+      <a
+        href="https://dilipchandima.github.io/why-complex-code-with-Getters-and-Setters-in-JAVA-It-s-time-to-move-with-Lombok.html"
+        rel="bookmark"
+        title="Permalink to Why Complex code with Getters and Setters in JAVA ? It’s time to move with Lombok"
+        >Why Complex code with Getters and Setters in JAVA ? It’s time to move with Lombok</a
+      >
+    </h2>
+ 
+  </header>
+
+  <div class="entry-content">
+    <p>Encapsulation is one of the four fundamental Object Oriented Concepts (OOP). The other three are inheritance, polymorphism, and abstraction.</p>
+<p>Encapsulation in Java is a mechanism of wrapping the data and code acting on the data together as a single unit. In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class. And those methods are called as Getters and Setters, following code is some basic example for getters and setters.</p>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">EncapTest</span> <span class="p">{</span>
+   <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+   <span class="kd">private</span> <span class="n">String</span> <span class="n">id</span><span class="p">;</span>
+   <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+
+   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAge</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">age</span><span class="p">;</span>
+   <span class="p">}</span>
+
+   <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
+   <span class="p">}</span>
+
+   <span class="kd">public</span> <span class="n">String</span> <span class="nf">getId</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">id</span><span class="p">;</span>
+   <span class="p">}</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAge</span><span class="p">(</span> <span class="kt">int</span> <span class="n">newAge</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">age</span> <span class="o">=</span> <span class="n">newAge</span><span class="p">;</span>
+   <span class="p">}</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="p">(</span><span class="n">String</span> <span class="n">newName</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">name</span> <span class="o">=</span> <span class="n">newName</span><span class="p">;</span>
+   <span class="p">}</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setId</span><span class="p">(</span> <span class="n">String</span> <span class="n">newId</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">id</span> <span class="o">=</span> <span class="n">newId</span><span class="p">;</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>So today I’m going to talk you about Project Lombok which is a java library that automatically plugs into your editor and build tools, spicing up your java.
+Never write another getter or equals method again, with one annotation your class has a fully featured builder, Automate your logging variables, and much more.
+In the Lombok library there are few annotations. following are some of the annotations and it will easy our way of development and the time.</p>
+<ul>
+<li><code>@getter</code> for generate getters</li>
+<li><code>@setter</code> for generate setters</li>
+<li><code>@EqualsAndHashCode</code> for generate equals and Hash Codes</li>
+</ul>
+<h1><code>@Data</code> annotation</h1>
+<p><code>@Data</code> is a convenient shortcut annotation that bundles the features of <code>@ToString</code>, <code>@EqualsAndHashCode</code>, <code>@Getter</code>,<code>@Setter</code> and <code>@RequiredArgsConstructor</code> together: In other words, <code>@Data</code> generates all the boilerplate that is normally associated with simple POJOs (Plain Old Java Objects) and beans: getters for all fields, setters for all non-final fields, and appropriate toString, equals and hashCode implementations that involve the fields of the class, and a constructor that initializes all final fields, as well as all non-final fields with no initializer that have been marked with <code>@NonNull</code>, in order to ensure the field is never null.</p>
+<p>Then you don’t need to write getters, setters, equals by user self those methods will be generated by the Lombok library.
+Following is a example which they are shown in there documentation for <code>@Data</code> annotation After you see this you will enjoy coding :D</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lombok.AccessLevel</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Setter</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.ToString</span><span class="p">;</span>
+
+<span class="nd">@Data</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">DataExample</span> <span class="p">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+  <span class="nd">@Setter</span><span class="p">(</span><span class="n">AccessLevel</span><span class="p">.</span><span class="na">PACKAGE</span><span class="p">)</span> <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+  <span class="kd">private</span> <span class="kt">double</span> <span class="n">score</span><span class="p">;</span>
+  <span class="kd">private</span> <span class="n">String</span><span class="o">[]</span> <span class="n">tags</span><span class="p">;</span>
+
+  <span class="nd">@ToString</span><span class="p">(</span><span class="n">includeFieldNames</span><span class="o">=</span><span class="kc">true</span><span class="p">)</span>
+  <span class="nd">@Data</span><span class="p">(</span><span class="n">staticConstructor</span><span class="o">=</span><span class="s">&quot;of&quot;</span><span class="p">)</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Exercise</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="n">T</span> <span class="n">value</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2>Happy Coding with Lombok :) …</h2>
+  </div>
+
+  <footer class="post-info text-muted">
+    Posted on
+    <span class="published" title="2019-01-09T00:00:00+05:30">
+      Wed 09 January 2019
+    </span>
+ in
+    <a href="https://dilipchandima.github.io/category/tech.html"
+      >TECH</a
+    >
+    Tagged <a
+      href="https://dilipchandima.github.io/tag/java.html"
+      >java </a
+    ><a
+      href="https://dilipchandima.github.io/tag/lombok.html"
+      >lombok </a
+    >   </footer>
+</section>
+
+     </div>
+
+    <div class="blog-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4"><p class="site-name">dilipchandima</p></div>
+          <div class="col-lg-8">
+            <h4 style="margin-top: 0;">Tags</h4>
+                <span class="tag-article"
+                  ><a href="https://dilipchandima.github.io/tag/java.html">java</a>
+                </span>
+                <span class="tag-article"
+                  ><a href="https://dilipchandima.github.io/tag/lombok.html">lombok</a>
+                </span>
+                <span class="tag-article"
+                  ><a href="https://dilipchandima.github.io/tag/react.html">react</a>
+                </span>
+                <span class="tag-article"
+                  ><a href="https://dilipchandima.github.io/tag/react-native.html">react-native</a>
+                </span>
+                <span class="tag-article"
+                  ><a href="https://dilipchandima.github.io/tag/storybook.html">storybook</a>
+                </span>
+                <span class="tag-article"
+                  ><a href="https://dilipchandima.github.io/tag/components.html">components</a>
+                </span>
+                <span class="tag-article"
+                  ><a href="https://dilipchandima.github.io/tag/jhipster.html">jhipster</a>
+                </span>
+                <span class="tag-article"
+                  ><a href="https://dilipchandima.github.io/tag/micro-services.html">micro-services</a>
+                </span>
+              <hr>
+              <h4 style="margin-top: 0;">Categories</h4>
+                <span class="tag-article"
+                  ><a href="https://dilipchandima.github.io/category/tech.html">TECH</a>
+                </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="contentinfo" class="footer">
+      <address id="about" class="vcard body">
+        &copy; <a href="https://dilipchandima.github.io">dilipchandima</a> Proudly powered by
+        <a href="http://getpelican.com/">Pelican</a>
+      </address>
+    </footer>
+
+     <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

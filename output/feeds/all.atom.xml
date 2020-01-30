@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>dilipchandima</title><link href="https://dilipchandima.github.io/" rel="alternate"></link><link href="https://dilipchandima.github.io/feeds/all.atom.xml" rel="self"></link><id>https://dilipchandima.github.io/</id><updated>2019-01-09T00:00:00+05:30</updated><entry><title>Why Complex code with Getters and Setters in JAVA ? It’s time to move with Lombok</title><link href="https://dilipchandima.github.io/why-complex-code-with-Getters-and-Setters-in-JAVA-It-s-time-to-move-with-Lombok.html" rel="alternate"></link><published>2019-01-09T00:00:00+05:30</published><updated>2019-01-09T00:00:00+05:30</updated><author><name>Dileepa</name></author><id>tag:dilipchandima.github.io,2019-01-09:/why-complex-code-with-Getters-and-Setters-in-JAVA-It-s-time-to-move-with-Lombok.html</id><summary type="html">&lt;p&gt;Encapsulation is one of the four fundamental Object Oriented Concepts (OOP). The other three are inheritance, polymorphism, and abstraction.&lt;/p&gt;
+&lt;p&gt;Encapsulation in Java is a mechanism of wrapping the data and code acting on the data together as a single unit. In encapsulation, the variables of a class will be hidden …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Encapsulation is one of the four fundamental Object Oriented Concepts (OOP). The other three are inheritance, polymorphism, and abstraction.&lt;/p&gt;
+&lt;p&gt;Encapsulation in Java is a mechanism of wrapping the data and code acting on the data together as a single unit. In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class. And those methods are called as Getters and Setters, following code is some basic example for getters and setters.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;EncapTest&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+   &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+   &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+   &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;age&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+   &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;getAge&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;age&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+   &lt;span class="p"&gt;}&lt;/span&gt;
+
+   &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="nf"&gt;getName&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+   &lt;span class="p"&gt;}&lt;/span&gt;
+
+   &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="nf"&gt;getId&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+   &lt;span class="p"&gt;}&lt;/span&gt;
+
+   &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;setAge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;newAge&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="n"&gt;age&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;newAge&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+   &lt;span class="p"&gt;}&lt;/span&gt;
+
+   &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;setName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;newName&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;newName&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+   &lt;span class="p"&gt;}&lt;/span&gt;
+
+   &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;setId&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;newId&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="n"&gt;id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;newId&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+   &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;So today I’m going to talk you about Project Lombok which is a java library that automatically plugs into your editor and build tools, spicing up your java.
+Never write another getter or equals method again, with one annotation your class has a fully featured builder, Automate your logging variables, and much more.
+In the Lombok library there are few annotations. following are some of the annotations and it will easy our way of development and the time.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;@getter&lt;/code&gt; for generate getters&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@setter&lt;/code&gt; for generate setters&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@EqualsAndHashCode&lt;/code&gt; for generate equals and Hash Codes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;&lt;code&gt;@Data&lt;/code&gt; annotation&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;@Data&lt;/code&gt; is a convenient shortcut annotation that bundles the features of &lt;code&gt;@ToString&lt;/code&gt;, &lt;code&gt;@EqualsAndHashCode&lt;/code&gt;, &lt;code&gt;@Getter&lt;/code&gt;,&lt;code&gt;@Setter&lt;/code&gt; and &lt;code&gt;@RequiredArgsConstructor&lt;/code&gt; together: In other words, &lt;code&gt;@Data&lt;/code&gt; generates all the boilerplate that is normally associated with simple POJOs (Plain Old Java Objects) and beans: getters for all fields, setters for all non-final fields, and appropriate toString, equals and hashCode implementations that involve the fields of the class, and a constructor that initializes all final fields, as well as all non-final fields with no initializer that have been marked with &lt;code&gt;@NonNull&lt;/code&gt;, in order to ensure the field is never null.&lt;/p&gt;
+&lt;p&gt;Then you don’t need to write getters, setters, equals by user self those methods will be generated by the Lombok library.
+Following is a example which they are shown in there documentation for &lt;code&gt;@Data&lt;/code&gt; annotation After you see this you will enjoy coding :D&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;lombok.AccessLevel&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;lombok.Setter&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;lombok.Data&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;lombok.ToString&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="nd"&gt;@Data&lt;/span&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;DataExample&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kd"&gt;final&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="nd"&gt;@Setter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;AccessLevel&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;PACKAGE&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;age&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;score&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;tags&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+  &lt;span class="nd"&gt;@ToString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;includeFieldNames&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="nd"&gt;@Data&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;staticConstructor&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;of&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Exercise&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kd"&gt;final&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kd"&gt;final&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Happy Coding with Lombok :) …&lt;/h2&gt;</content><category term="TECH"></category><category term="java"></category><category term="lombok"></category></entry><entry><title>Add Addons to React Storybook</title><link href="https://dilipchandima.github.io/add-addons-to-react-storybook.html" rel="alternate"></link><published>2018-12-02T00:00:00+05:30</published><updated>2018-12-02T00:00:00+05:30</updated><author><name>Dileepa</name></author><id>tag:dilipchandima.github.io,2018-12-02:/add-addons-to-react-storybook.html</id><summary type="html">&lt;p&gt;&lt;img alt="img1" src="https://miro.medium.com/max/3836/1*icPmCZnonLfh6DupELut8A.png"&gt;&lt;/p&gt;
+&lt;p&gt;This is final story on developing Storybook component library for React project and here we are going to discuss about How to add addons to your project, Addons implement extra features for Storybooks to make your stories more useful.&lt;/p&gt;
+&lt;p&gt;If you are not having Storybook configured project please follow the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="img1" src="https://miro.medium.com/max/3836/1*icPmCZnonLfh6DupELut8A.png"&gt;&lt;/p&gt;
+&lt;p&gt;This is final story on developing Storybook component library for React project and here we are going to discuss about How to add addons to your project, Addons implement extra features for Storybooks to make your stories more useful.&lt;/p&gt;
+&lt;p&gt;If you are not having Storybook configured project please follow the articles before read this then you will have good knowledge on Storybook. It will be easy to understand Addons.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://medium.com/@dilipchandima/getting-started-with-storybook-9d786526eb35"&gt;Getting started with Storybook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://medium.com/@dilipchandima/manual-configuration-storybook-with-react-c75d37a46a4a"&gt;Manual Configuration Storybook with React&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Basically, there are two types of addons, those are Decorators and Native Addons.&lt;/p&gt;
+&lt;h2&gt;Decorator Addons&lt;/h2&gt;
+&lt;p&gt;Decorators are wrapper components or Storybook decorators that wrap a story. For example, let’s say we want to center a story rendered on the screen. For that, we can use a Decorator Addon. Please refere the  &lt;a href="https://storybook.js.org/addons/introduction/#1-decorators"&gt;documentation&lt;/a&gt;  for more details and sample.&lt;/p&gt;
+&lt;h2&gt;Native Addons&lt;/h2&gt;
+&lt;p&gt;Native addons use Storybook as a platform and interact with it. Native addons can add extra features beyond wrapping stories.For example,  &lt;code&gt;storybook-actions&lt;/code&gt;is such an addon. Please refere the  &lt;a href="https://storybook.js.org/addons/introduction/#2-native-addons"&gt;documentation&lt;/a&gt;  for more details and sample.&lt;/p&gt;
+&lt;p&gt;Let’s start to add some basic addons to your existing storybook project. First we are going to add npm modules for  &lt;code&gt;actions&lt;/code&gt;  ,&lt;code&gt;notes&lt;/code&gt;  ,&lt;code&gt;knobs&lt;/code&gt;  addons for that run the following command from your root project folder.&lt;/p&gt;
+&lt;p&gt;npm i --save-dev @storybook/addon-actions @storybook/addon-notes @storybook/addon-knobs&lt;/p&gt;
+&lt;p&gt;lets add  &lt;code&gt;addons.js&lt;/code&gt;  file under your  &lt;code&gt;storyconfig&lt;/code&gt;  folder and add the following code for import the register of each addon.&lt;/p&gt;
+&lt;p&gt;Now you have to add addons to your stories for that first import addons to your  &lt;code&gt;index.js&lt;/code&gt;  file in  &lt;code&gt;storybook&lt;/code&gt;  folder.&lt;/p&gt;
+&lt;p&gt;Now import addons successfully and we are going to use the addons in the existing stories. Then add the decorators to all stories in your project.&lt;/p&gt;
+&lt;p&gt;Finally Our  &lt;code&gt;stories/index.js&lt;/code&gt;  file looks like this,&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img2" src="https://miro.medium.com/max/3836/1*icPmCZnonLfh6DupELut8A.png"&gt;&lt;/p&gt;
+&lt;p&gt;Final Storybook application&lt;/p&gt;
+&lt;p&gt;Now you can enjoy  &lt;strong&gt;Storybook&lt;/strong&gt;  from developing your customized web application components.&lt;/p&gt;</content><category term="TECH"></category><category term="react"></category><category term="react-native"></category><category term="storybook"></category><category term="components"></category></entry><entry><title>Getting started with Storybook</title><link href="https://dilipchandima.github.io/getting-started-with-storybook.html" rel="alternate"></link><published>2018-12-02T00:00:00+05:30</published><updated>2018-12-02T00:00:00+05:30</updated><author><name>Dileepa</name></author><id>tag:dilipchandima.github.io,2018-12-02:/getting-started-with-storybook.html</id><summary type="html">&lt;p&gt;&lt;img alt="Alt Text" src="https://dilipchandima.github.io/images/storybook.gif"&gt;&lt;/p&gt;
+&lt;p&gt;Storybook is a UI development environment and playground for UI components. This tool enables users to create components independently and showcase components interactively in an isolated development environment.&lt;/p&gt;
+&lt;p&gt;Storybook runs outside of your main app so developers can develop UI components in isolation without worrying about app specific dependencies and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Alt Text" src="https://dilipchandima.github.io/images/storybook.gif"&gt;&lt;/p&gt;
+&lt;p&gt;Storybook is a UI development environment and playground for UI components. This tool enables users to create components independently and showcase components interactively in an isolated development environment.&lt;/p&gt;
+&lt;p&gt;Storybook runs outside of your main app so developers can develop UI components in isolation without worrying about app specific dependencies and requirements.&lt;/p&gt;
+&lt;p&gt;Storybook supports many different frontend view layers with more coming!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt Text" src="https://dilipchandima.github.io/images/frontend.png"&gt;&lt;/p&gt;
+&lt;p&gt;React, Angular, Vue, Mithril, Marko, HTML, Svelte, Meteor, and Ember are currently supported.&lt;/p&gt;
+&lt;p&gt;Cool Now Let’s move to get started with Storybook. Following instructions are for install Storybook on your project automatically but one thing this automatic tool adds a set of boilerplate files for Storybook in your project.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; project-directory 
+npx -p @storybook/cli sb init
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Let’s start Storybook with following command then Storybook should be available in the browser with a link provided in the console.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;npm run storybook
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now you can enjoy Storybook from developing your customized web application components.&lt;/p&gt;</content><category term="TECH"></category><category term="react"></category><category term="react-native"></category><category term="storybook"></category><category term="components"></category></entry><entry><title>Manual Configuration Storybook with React</title><link href="https://dilipchandima.github.io/manual-configuration-storybook-with-react.html" rel="alternate"></link><published>2018-12-02T00:00:00+05:30</published><updated>2018-12-02T00:00:00+05:30</updated><author><name>Dileepa</name></author><id>tag:dilipchandima.github.io,2018-12-02:/manual-configuration-storybook-with-react.html</id><summary type="html">&lt;p&gt;Hey guys, I’m going to discuss with you how to configure Storybook manually on your React component project. As we discussed the automatic configuration of the Storybook generates a set of boilerplate files on your component project You can do manual configuration for React.&lt;/p&gt;
+&lt;p&gt;I assumed that you already …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hey guys, I’m going to discuss with you how to configure Storybook manually on your React component project. As we discussed the automatic configuration of the Storybook generates a set of boilerplate files on your component project You can do manual configuration for React.&lt;/p&gt;
+&lt;p&gt;I assumed that you already have a React project for your customized components and here we are going to add Storybook and create components independently to your main project So Let’s start the journey :)&lt;/p&gt;
+&lt;p&gt;Let’s add all the basic dependency to the project for setup Storybook. For that run the following command from your project folder to add the Storybook module.&lt;/p&gt;
+&lt;p&gt;npm i --save-dev @storybook/react&lt;/p&gt;
+&lt;p&gt;Now you have Storybook module in your project and Lets add other dependencies, Run following command on you terminal those will add  &lt;code&gt;react-dom&lt;/code&gt;  as main dependency and  &lt;code&gt;bable-core&lt;/code&gt;  ,  &lt;code&gt;bable-loader&lt;/code&gt;  as development dependancies.&lt;/p&gt;
+&lt;p&gt;npm i --save react react-dom &lt;br&gt;
+npm i --save-dev babel-core &lt;br&gt;
+npm i --save-dev babel-loader&lt;/p&gt;
+&lt;p&gt;Now you are ready code for you component Storybook Let’s begin with the configuration file. First Create a folder in your project root named  &lt;code&gt;storyconfig&lt;/code&gt;  and add a new file  &lt;code&gt;config.js&lt;/code&gt;  then you project structure is like following image.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img1" src="https://miro.medium.com/max/1496/1*uMin-Z086d0WZ--uy6etHA.png"&gt;&lt;/p&gt;
+&lt;p&gt;folder structure&lt;/p&gt;
+&lt;p&gt;Now you have to add the configuration to  &lt;code&gt;config.js&lt;/code&gt;  file. You have add the storybook stories file location to the configuration.&lt;/p&gt;
+&lt;p&gt;Now you have to add the run script to the  &lt;code&gt;package.json&lt;/code&gt;  file for run the Storybook server. Add the following script to your file.&lt;/p&gt;
+&lt;p&gt;{   &lt;br&gt;
+    "scripts": &lt;br&gt;
+        {     &lt;br&gt;
+            "storybook": "start-storybook -p 9001 -c .storybook"   &lt;br&gt;
+        } &lt;br&gt;
+}&lt;/p&gt;
+&lt;p&gt;Congratulations, Now you finish all the configurations. Let’s Start the coding for your components :) for that create a folder in  &lt;code&gt;src&lt;/code&gt;  called  &lt;code&gt;storybook&lt;/code&gt;  and create  &lt;code&gt;index.js&lt;/code&gt;  file for your stories. Then you folder structure looks like this,&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img2" src="https://miro.medium.com/max/1500/1*ZX6G1yBg7EX4C9Qw5QUlfw.png"&gt;&lt;/p&gt;
+&lt;p&gt;Let’s add some sample stories to your project. Add the following code to your  &lt;code&gt;index.js&lt;/code&gt;  file in the  &lt;code&gt;storybook&lt;/code&gt;  folder.&lt;/p&gt;
+&lt;p&gt;After adding some stories you can run the Storybook by following command, and you will see the Storybook on your browser. Now you can change components and write stories whenever you need to. You’ll see the changes in Storybook immediately since it uses Webpack’s hot module reloading.&lt;/p&gt;
+&lt;p&gt;npm run storybook&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img3" src="https://miro.medium.com/max/1380/1*kNGmQ5mppNg-9aI7rb60XQ.png"&gt;&lt;/p&gt;
+&lt;p&gt;Now you can enjoy  &lt;strong&gt;Storybook&lt;/strong&gt;  from developing your customized web application components.&lt;/p&gt;</content><category term="TECH"></category><category term="react"></category><category term="react-native"></category><category term="storybook"></category><category term="components"></category></entry><entry><title>Why micro-services from scratch, JHipster is the solution for generate, develop and deploy</title><link href="https://dilipchandima.github.io/why-micro-services-from-scratch-jhipster-is-the-solution-for-generate-develop-and-deploy.html" rel="alternate"></link><published>2018-01-10T00:00:00+05:30</published><updated>2018-01-10T00:00:00+05:30</updated><author><name>Dileepa</name></author><id>tag:dilipchandima.github.io,2018-01-10:/why-micro-services-from-scratch-jhipster-is-the-solution-for-generate-develop-and-deploy.html</id><summary type="html">&lt;p&gt;&lt;img alt="Alt Text" src="https://dilipchandima.github.io/images/jhipster.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;Yes, I know most of you reading my article is software developers who are using Spring Boot, micro-services architecture for your day to day development. But this is the time to change from developing from the scratch. Java Hipster (JHipster) helps you to generate, develop and deploy your Spring Boot …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Alt Text" src="https://dilipchandima.github.io/images/jhipster.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;Yes, I know most of you reading my article is software developers who are using Spring Boot, micro-services architecture for your day to day development. But this is the time to change from developing from the scratch. Java Hipster (JHipster) helps you to generate, develop and deploy your Spring Boot + Angular web applications and micro-services with few simple commands. Using JHipster will reduce your development hours and not only the generating micro-services but with using JDL Studio you can define data models and generate the CRUD operations for defined Data Models.&lt;/p&gt;
+&lt;p&gt;You can install JHipster and use it within few minutes. They provide 5 ways of working with JHipste,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JHipster Online is a simple way to generate an application without installing JHipster in the first place.&lt;/li&gt;
+&lt;li&gt;“Local installation with Yarn” is the classical way of working with JHipster. Everything is installed on your machine, which can be a little complex to set up, but that’s how most people usually work. In case of doubt, choose this installation.&lt;/li&gt;
+&lt;li&gt;“Local installation with NPM” is the same as classical “local installation with Yarn”, but using NPM instead of Yarn&lt;/li&gt;
+&lt;li&gt;The Vagrant-based “development box”, with all tools already set up in a Ubuntu-based virtual machine.&lt;/li&gt;
+&lt;li&gt;The “Docker” container, which brings you a lightweight container with JHipster installed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I’m discussing with you, installing JHipster with NPM. follow the instructions to install, as pre-requested technologies you should have Java, Node JS and NPM on your machine.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install Java 8 from the Oracle website.&lt;/li&gt;
+&lt;li&gt;Install Node.js from the Node.js website (prefer an LTS version)&lt;/li&gt;
+&lt;li&gt;Install NPM: npm install -g npm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now you can Install JHipster with using NPM as well as for using JHipster commands you want to install yeoman and follow two of following instructions,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To install Yeoman, type:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ npm install -g yo
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;To install JHipster, type:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ npm install -g generator-jhipster
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now you can enjoy JHipster from developing your web applications and micro-services APIs&lt;/p&gt;</content><category term="TECH"></category><category term="java"></category><category term="jhipster"></category><category term="micro-services"></category></entry></feed>
