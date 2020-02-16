@@ -10,7 +10,7 @@ body {
 
 h1 {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .navbar {
@@ -24,7 +24,7 @@ h1 {
 
 h2 > a {
   font-family: "Palanquin Dark";
-  font-size: 30px;
+  font-size: 35px;
   text-decoration: none;
   color: #000000;
   font-weight: 400;
