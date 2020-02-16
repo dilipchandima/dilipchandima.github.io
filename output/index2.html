@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Manual Configuration Storybook with React - dilipchandima</title>
+    <title>dilipchandima</title>
     <meta charset="utf-8" />
     <link
       rel="stylesheet"
@@ -67,73 +67,47 @@
     </div>
 
     <div class="container">
-<section id="content" class="article content">
-  <header>
-    <h2 class="entry-title">
+
+<section id="content" class="content">
+    <article class="hentry">
+    <header>
+      <span class="tag-article">java </span>
+      <span class="tag-article">jhipster </span>
+      <span class="tag-article">micro-services </span>
+      <h2 class="entry-title">
+        <a
+          href="/why-micro-services-from-scratch-jhipster-is-the-solution-for-generate-develop-and-deploy.html"
+          rel="bookmark"
+          title="Permalink to Why micro-services from scratch, JHipster is the solution for generate, develop and deploy"
+          >Why micro-services from scratch, JHipster is the solution for generate, develop and deploy</a
+        >
+      </h2>
+    </header>
+    <div class="entry-content"><p><img alt="Alt Text" src="/images/jhipster.jpeg"></p>
+<p>Yes, I know most of you reading my article is software developers who are using Spring Boot, micro-services architecture for your day to day development. But this is the time to change from developing from the scratch. Java Hipster (JHipster) helps you to generate, develop and deploy your Spring Boot …</p></div>
+    <p class="read-more">
       <a
-        href="/manual-configuration-storybook-with-react.html"
+        href="/why-micro-services-from-scratch-jhipster-is-the-solution-for-generate-develop-and-deploy.html"
         rel="bookmark"
-        title="Permalink to Manual Configuration Storybook with React"
-        >Manual Configuration Storybook with React</a
+        title="Permalink to Why micro-services from scratch, JHipster is the solution for generate, develop and deploy"
+        >READ MORE</a
       >
-    </h2>
- 
-  </header>
-
-  <div class="entry-content">
-    <p>Hey guys, I’m going to discuss with you how to configure Storybook manually on your React component project. As we discussed the automatic configuration of the Storybook generates a set of boilerplate files on your component project You can do manual configuration for React.</p>
-<p>I assumed that you already have a React project for your customized components and here we are going to add Storybook and create components independently to your main project So Let’s start the journey :)</p>
-<p>Let’s add all the basic dependency to the project for setup Storybook. For that run the following command from your project folder to add the Storybook module.</p>
-<p>npm i --save-dev @storybook/react</p>
-<p>Now you have Storybook module in your project and Lets add other dependencies, Run following command on you terminal those will add  <code>react-dom</code>  as main dependency and  <code>bable-core</code>  ,  <code>bable-loader</code>  as development dependancies.</p>
-<p>npm i --save react react-dom <br>
-npm i --save-dev babel-core <br>
-npm i --save-dev babel-loader</p>
-<p>Now you are ready code for you component Storybook Let’s begin with the configuration file. First Create a folder in your project root named  <code>storyconfig</code>  and add a new file  <code>config.js</code>  then you project structure is like following image.</p>
-<p><img alt="img1" src="https://miro.medium.com/max/1496/1*uMin-Z086d0WZ--uy6etHA.png"></p>
-<p>folder structure</p>
-<p>Now you have to add the configuration to  <code>config.js</code>  file. You have add the storybook stories file location to the configuration.</p>
-<p>Now you have to add the run script to the  <code>package.json</code>  file for run the Storybook server. Add the following script to your file.</p>
-<p>{   <br>
-    "scripts": <br>
-        {     <br>
-            "storybook": "start-storybook -p 9001 -c .storybook"   <br>
-        } <br>
-}</p>
-<p>Congratulations, Now you finish all the configurations. Let’s Start the coding for your components :) for that create a folder in  <code>src</code>  called  <code>storybook</code>  and create  <code>index.js</code>  file for your stories. Then you folder structure looks like this,</p>
-<p><img alt="img2" src="https://miro.medium.com/max/1500/1*ZX6G1yBg7EX4C9Qw5QUlfw.png"></p>
-<p>Let’s add some sample stories to your project. Add the following code to your  <code>index.js</code>  file in the  <code>storybook</code>  folder.</p>
-<p>After adding some stories you can run the Storybook by following command, and you will see the Storybook on your browser. Now you can change components and write stories whenever you need to. You’ll see the changes in Storybook immediately since it uses Webpack’s hot module reloading.</p>
-<p>npm run storybook</p>
-<p><img alt="img3" src="https://miro.medium.com/max/1380/1*kNGmQ5mppNg-9aI7rb60XQ.png"></p>
-<p>Now you can enjoy  <strong>Storybook</strong>  from developing your customized web application components.</p>
-  </div>
-
-  <footer class="post-info text-muted">
-    Posted on
-    <span class="published" title="2018-12-02T00:00:00+05:30">
-      Sun 02 December 2018
-    </span>
- in
-    <a href="/category/tech.html"
-      >TECH</a
-    >
-    Tagged <a
-      href="/tag/react.html"
-      >react </a
-    ><a
-      href="/tag/react-native.html"
-      >react-native </a
-    ><a
-      href="/tag/storybook.html"
-      >storybook </a
-    ><a
-      href="/tag/components.html"
-      >components </a
-    >   </footer>
+    </p>
+  </article>
+ <nav aria-label="Page navigation example">
+  <ul class="pagination">
+     <li class="page-item">
+      <a
+        class="page-link"
+        href="/index.html"
+        >Previous</a
+      >
+    </li>
+     <li class="page-item disabled"><a class="page-link">Next</a></li>
+  </ul>
+</nav>
 </section>
-
-     </div>
+    </div>
 
     <div class="blog-footer">
       <div class="container">
