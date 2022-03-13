@@ -1,4 +1,4 @@
-Title: Are you seeking for build your app on cloud
+Title: Are you seeking for build your app on cloud.
 Date: 2020-02-16
 Category: TECH
 Tags: react native, app center
@@ -16,7 +16,7 @@ When you go to the [Visual Studio App Center](appcenter.ms) you have to signup t
 
 ### Step 2. Create a new app
 
-Now you can create your own application development process. For that you need to create a new application in the VSAC, 
+Now you can create your own application development process. For that you need to create a new application in the VSAC,
 
 ![Alt Text]({static}/images/vsac/step-2.png)
 
@@ -45,14 +45,12 @@ You can toggle `Distribute builds`, which will automatically send a download lin
 ![Alt Text]({static}/images/vsac/step-6.png)
 ![Alt Text]({static}/images/vsac/step-7.png)
 
-
 ### Step 5. Install your app
 
 Once the build has run to completion, a successful build will generate an email automatically that is sent to your device with an install link.
 
 ![Alt Text]({static}/images/vsac/step-8.png)
 
-
-Now you can configure your mobile application development process with Visual Studio App Center !!!! 
+Now you can configure your mobile application development process with Visual Studio App Center !!!!
 
 Images - [Visual Studio App Center Documentation](https://visualstudio.microsoft.com/app-center/get-started/)
