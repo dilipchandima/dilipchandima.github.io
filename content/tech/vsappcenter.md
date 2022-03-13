@@ -1,4 +1,4 @@
-Title: Are you seeking for build your app on cloud.
+Title: Are you seeking for build your app on cloud
 Date: 2020-02-16
 Category: TECH
 Tags: react native, app center
